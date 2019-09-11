@@ -68,20 +68,21 @@
     <Compile Include="Assets\HTUtility\4-SetupScriptTemplate\Editor\EditScriptTemplate.cs" />
     <Compile Include="Assets\HTUtility\4-SetupScriptTemplate\Editor\OnScriptsCreate.cs" />
     <Compile Include="Assets\HTUtility\4-SetupScriptTemplate\Editor\SetupScriptTemplate.cs" />
+    <Compile Include="Assets\HTUtility\5-GenerateDirectoryStructure\Editor\GenerateDirectoryStructure.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>E:/Work/Environment/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -321,25 +322,25 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.ads@2.3.1/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>E:/Work/Project/UnityProject/HTUtility/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>E:/Work/Environment/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
