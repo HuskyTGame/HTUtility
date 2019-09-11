@@ -13,7 +13,7 @@ namespace HTUtility
 {
     public class SetupScriptTemplate : EditorWindow
     {
-        [MenuItem("HTUtility/4.SetupScriptTemplate &n", false, 4)]
+        [MenuItem("HTUtility/4.SetupScriptTemplate &s", false, 4)]
         private static void MenuClick()
         {
             var window = GetWindow<SetupScriptTemplate>("设置脚本模板");
