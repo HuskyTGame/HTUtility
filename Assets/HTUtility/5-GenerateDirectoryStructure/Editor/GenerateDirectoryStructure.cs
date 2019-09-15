@@ -50,6 +50,7 @@ namespace HTUtility
                 "Materials",
                 "Prefabs",
                 "Shaders",
+                "Textures",
             };
             GenerateDirectoryWithSameLevel(Path.Combine(forwardPath, rootDirectory, "Resources"), sameLvDirNameArray2);
             CreateScene(rootDirectory, Path.Combine(Path.Combine(forwardPath, rootDirectory, "Scenes")));
