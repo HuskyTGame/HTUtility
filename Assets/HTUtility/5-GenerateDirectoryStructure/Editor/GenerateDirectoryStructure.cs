@@ -18,6 +18,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 namespace HTUtility
 {
@@ -31,10 +32,19 @@ namespace HTUtility
             Debug.Log("文件夹目录结构生成完毕");
         }
 
+        public static void Generate(string title)
+        {
+            GenerateStructure(title, true);
+        }
+
         private static void GenerateStructure()
         {
+            GenerateStructure(Application.productName);
+        }
+        private static void GenerateStructure(string rootDirectoryName, bool generateScript = false)
+        {
             string forwardPath = Application.dataPath;
-            string rootDirectory = GetRootDirectoryName();//根文件夹
+            string rootDirectory = GetRootDirectoryName(rootDirectoryName);//根文件夹
             //1.创建根文件夹下的文件夹
             string[] sameLvDirNameArray = new string[]
             {
@@ -54,9 +64,35 @@ namespace HTUtility
             };
             GenerateDirectoryWithSameLevel(Path.Combine(forwardPath, rootDirectory, "Resources"), sameLvDirNameArray2);
             CreateScene(rootDirectory, Path.Combine(Path.Combine(forwardPath, rootDirectory, "Scenes")));
+            //生成脚本
+            if (generateScript)
+            {
+                string className = rootDirectoryName;
+                if (EditorUtil.IsNumeric(rootDirectoryName[0].ToString()))
+                {
+                    className = rootDirectoryName.Remove(0, rootDirectoryName.IndexOf(".") + 1);
+                }
+                GenerateScript(className, Path.Combine(forwardPath, rootDirectory, "Scripts"));
+            }
         }
 
+
         #region Helper
+        /// <summary>
+        /// 创建脚本，受自定义命名空间
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="folderPath"></param>
+        private static void GenerateScript(string name, string folderPath)
+        {
+            string fullPath = folderPath + "/" + name + ".cs";
+            FileStream fs = new FileStream(fullPath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
+            fs.Close();
+            //写入作者名、日期时间、命名空间、类名
+            string content = EditScriptTemplate.EditScriptInfo(name) + EditScriptTemplate.EditCodeTemplate(ScriptTemplateData.CustomNamespace, name);
+            //写入文件
+            File.WriteAllText(fullPath, content);
+        }
         /// <summary>
         /// 创建同级文件夹
         /// </summary>
@@ -76,7 +112,11 @@ namespace HTUtility
         /// <returns></returns>
         private static string GetRootDirectoryName()
         {
-            string rootDirectory = Application.productName;//根文件夹
+            return GetRootDirectoryName(Application.productName);
+        }
+        private static string GetRootDirectoryName(string rootDirectoryName)
+        {
+            string rootDirectory = rootDirectoryName;//根文件夹
             if (Directory.Exists(Path.Combine(Application.dataPath, rootDirectory)))
             {
                 rootDirectory = "Root(自行更改文件夹名)";

@@ -8,6 +8,7 @@
 
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -83,6 +84,13 @@ namespace HTUtility
             {
                 Directory.CreateDirectory(folderPath);
             }
+        }
+        /// <summary>
+        /// 验证字符串为数字（使用正则表达式）
+        /// </summary>
+        public static bool IsNumeric(string value)
+        {
+            return Regex.IsMatch(value, @"^[-+]?\d+(\.\d+)?$");
         }
     }
 }

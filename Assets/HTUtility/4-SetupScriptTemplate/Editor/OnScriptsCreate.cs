@@ -32,6 +32,7 @@ namespace HTUtility
                 content = EditScriptTemplate.EditScriptInfo(className) + EditScriptTemplate.EditCodeTemplate(ScriptTemplateData.CustomNamespace, className);
                 //6.写入文件
                 File.WriteAllText(path, content);
+                UnityEditor.AssetDatabase.Refresh();
             }
         }
     }
