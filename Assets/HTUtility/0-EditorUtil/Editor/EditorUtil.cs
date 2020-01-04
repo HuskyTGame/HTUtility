@@ -39,8 +39,11 @@ namespace HTUtility
         /// <param 导出文件的文件名="fileName"></param>
         public static void ExportUnityPackage(string assetPathName, string fileName)
         {
+            EditorUtility.DisplayProgressBar("导出当前项目", string.Format("{0}正导出为UnityPackage", Application.productName), 0.1f);
             //递归导出指定文件夹下所有文件
             AssetDatabase.ExportPackage(assetPathName, fileName, ExportPackageOptions.Recurse);
+            EditorUtility.DisplayProgressBar("导出当前项目", string.Format("{0}正导出为UnityPackage", Application.productName), 1f);
+            EditorUtility.ClearProgressBar();
         }
         /// <summary>
         /// 生成UnityPackage名
