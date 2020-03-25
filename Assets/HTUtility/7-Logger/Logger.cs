@@ -44,7 +44,7 @@ namespace HTUtility
         private static ILoggerListener[] mChannelListenerArray;
 
         /// <summary>
-        /// 初始化
+        /// 初始化，默认开启所有频道
         /// </summary>
         public void Init(bool needPackageMsg = true)
         {
@@ -72,6 +72,16 @@ namespace HTUtility
             mChannelEnableArray = null;
             mNeedPackageMsg = false;
             mHasInit = false;
+        }
+        /// <summary>
+        /// 设置频道开关状态
+        /// </summary>
+        /// <param 频道="channel"></param>
+        /// <param 开关状态="state"></param>
+        public void SetChannelState(Channel channel, bool state)
+        {
+            if (mHasInit == false) return;
+            mChannelEnableArray[(int)channel] = state;
         }
         public void AddListener(Channel channel, ILoggerListener listener)
         {
