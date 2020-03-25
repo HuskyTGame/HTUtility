@@ -40,11 +40,11 @@ namespace HTUtility.Example
             UnityWarningListener unityWarningListener = new UnityWarningListener();
             UnityErrorListener unityErrorListener = new UnityErrorListener();
             Logger.Instance.Init(true);
-            Logger.Instance.AddListener(Logger.Channel.INFO, unityDebugListener);
-            Logger.Instance.AddListener(Logger.Channel.TODO, unityDebugListener);
-            Logger.Instance.AddListener(Logger.Channel.DEBUG, unityDebugListener);
-            Logger.Instance.AddListener(Logger.Channel.WARNING, unityWarningListener);
-            Logger.Instance.AddListener(Logger.Channel.ERROR, unityErrorListener);
+            Logger.Instance.AddListener(Logger.Channel.Info, unityDebugListener);
+            Logger.Instance.AddListener(Logger.Channel.Todo, unityDebugListener);
+            Logger.Instance.AddListener(Logger.Channel.Debug, unityDebugListener);
+            Logger.Instance.AddListener(Logger.Channel.Warning, unityWarningListener);
+            Logger.Instance.AddListener(Logger.Channel.Error, unityErrorListener);
 
 
             Logger.Info("测试 Logger 成功！");
