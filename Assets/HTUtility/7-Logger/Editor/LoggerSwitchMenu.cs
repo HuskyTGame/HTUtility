@@ -17,11 +17,11 @@ namespace HTUtility
         public enum LoggerModeEnum
         {
             //初始未设置时的默认值
-            DEFAULT = 0,
+            Default = 0,
             //关闭打印消息
-            CLOSE = 1,
+            Close = 1,
             //开启打印消息
-            OPEN = 2,
+            Open = 2,
         }
         /// <summary>
         /// 使用 EditorPrefs 存储的 key 值
@@ -38,7 +38,7 @@ namespace HTUtility
         /// <summary>
         /// LoggerMode 在未设置的时候默认值为 0
         /// </summary>
-        private static LoggerModeEnum mLoggerMode = LoggerModeEnum.DEFAULT;
+        private static LoggerModeEnum mLoggerMode = LoggerModeEnum.Default;
 
         /// <summary>
         /// 打印消息模式
@@ -49,10 +49,10 @@ namespace HTUtility
             get
             {
                 //第一次设置 LoggerMode
-                if (mLoggerMode == LoggerModeEnum.DEFAULT)
+                if (mLoggerMode == LoggerModeEnum.Default)
                 {
                     //获取存储的 LoggerMode 值，默认为 Close
-                    mLoggerMode = (LoggerModeEnum)EditorPrefs.GetInt(LOGGER_MODE_KEY, (int)LoggerModeEnum.CLOSE);
+                    mLoggerMode = (LoggerModeEnum)EditorPrefs.GetInt(LOGGER_MODE_KEY, (int)LoggerModeEnum.Close);
                 }
                 return mLoggerMode;
             }
@@ -69,10 +69,10 @@ namespace HTUtility
         [MenuItem(LOGGER_SWITCH_MENU_PATH, false, 7)]
         private static void SwitchLoggerMode()
         {
-            LoggerMode = LoggerMode == LoggerModeEnum.OPEN ? LoggerModeEnum.CLOSE : LoggerModeEnum.OPEN;
+            LoggerMode = LoggerMode == LoggerModeEnum.Open ? LoggerModeEnum.Close : LoggerModeEnum.Open;
 
             //若为打印消息模式：
-            if (LoggerMode == LoggerModeEnum.OPEN)
+            if (LoggerMode == LoggerModeEnum.Open)
             {
                 //读取 Logger 脚本
                 string[] contents = File.ReadAllLines(mLoggerScriptPath);
@@ -118,7 +118,7 @@ namespace HTUtility
         [MenuItem(LOGGER_SWITCH_MENU_PATH, true, 7)]
         private static bool SwitchLoggerModeValidate()
         {
-            bool openLogger = LoggerMode == LoggerModeEnum.OPEN ? true : false;
+            bool openLogger = LoggerMode == LoggerModeEnum.Open ? true : false;
             //将菜单设置成可切换状态
             //参数（菜单，依据什么切换）
             Menu.SetChecked(LOGGER_SWITCH_MENU_PATH, openLogger);
