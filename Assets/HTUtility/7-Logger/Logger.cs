@@ -25,17 +25,17 @@ namespace HTUtility
     {
         public enum Channel
         {
-            DEFAULT = 0,
+            Default = 0,
             //打印信息（程序正常运行的信息）
-            INFO,
+            Info,
             //待完成的信息
-            TODO,
+            Todo,
             //debug时输出的信息
-            DEBUG,
+            Debug,
             //警告信息
-            WARNING,
+            Warning,
             //错误信息
-            ERROR,
+            Error,
         }
         private static bool mHasInit = false;
         //是否需要包装 消息 （给消息加上 日期 和 Channel）
@@ -99,31 +99,31 @@ namespace HTUtility
         public static void Info(string msg)
         {
 #if LOGGER_OPEN
-            LogMsg(msg, Channel.INFO, mNeedPackageMsg);
+            LogMsg(msg, Channel.Info, mNeedPackageMsg);
 #endif
         }
         public static void Todo(string msg)
         {
 #if LOGGER_OPEN
-            LogMsg(msg, Channel.TODO, mNeedPackageMsg);
+            LogMsg(msg, Channel.Todo, mNeedPackageMsg);
 #endif
         }
         public static void Debug(string msg)
         {
 #if LOGGER_OPEN
-            LogMsg(msg, Channel.DEBUG, mNeedPackageMsg);
+            LogMsg(msg, Channel.Debug, mNeedPackageMsg);
 #endif
         }
         public static void Warning(string msg)
         {
 #if LOGGER_OPEN
-            LogMsg(msg, Channel.WARNING, mNeedPackageMsg);
+            LogMsg(msg, Channel.Warning, mNeedPackageMsg);
 #endif
         }
         public static void Error(string msg)
         {
 #if LOGGER_OPEN
-            LogMsg(msg, Channel.ERROR, mNeedPackageMsg);
+            LogMsg(msg, Channel.Error, mNeedPackageMsg);
 #endif
         }
         public static void LogMsg(string msg, Channel channel, bool needPackageMsg)
