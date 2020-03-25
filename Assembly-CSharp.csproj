@@ -60,7 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HTUtility\6-GenerateDirectoryStructurePlus\NewBehaviourScript.cs" />
+    <Compile Include="Assets\HTUtility\7-Logger\Example\UnityLoggerExample.cs" />
+    <Compile Include="Assets\HTUtility\7-Logger\Logger.cs" />
+    <Compile Include="Assets\HTUtility\Core\HTSingleton.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
