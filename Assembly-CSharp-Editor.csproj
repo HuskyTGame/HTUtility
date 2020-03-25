@@ -70,6 +70,7 @@
     <Compile Include="Assets\HTUtility\4-SetupScriptTemplate\Editor\SetupScriptTemplate.cs" />
     <Compile Include="Assets\HTUtility\5-GenerateDirectoryStructure\Editor\GenerateDirectoryStructure.cs" />
     <Compile Include="Assets\HTUtility\6-GenerateDirectoryStructurePlus\Editor\GenerateDirectoryStructurePlus.cs" />
+    <Compile Include="Assets\HTUtility\7-Logger\Editor\LoggerSwitchMenu.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -706,6 +707,12 @@
     <Reference Include="Boo.Lang">
       <HintPath>E:/Work/Environment/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{86E37766-5117-56B5-37D8-56B54C390D1D}</Project>
+      <Name>Assembly-CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
