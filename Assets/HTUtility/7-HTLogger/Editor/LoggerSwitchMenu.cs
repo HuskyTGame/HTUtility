@@ -3,7 +3,7 @@
 	作者：HuskyT
 	邮箱：1005240602@qq.com
 	日期：2020/3/25 15:55:31
-	功能：消息打印开关（决定 Logger 是否参与编译）
+	功能：消息打印开关（决定 HTLogger 是否参与编译）
 *****************************************************/
 
 using UnityEngine;
@@ -32,9 +32,9 @@ namespace HTUtility
         /// </summary>
         private const string LOGGER_SWITCH_MENU_PATH = "HTUtility/7.LoggerSwitch";
         /// <summary>
-        /// Logger 脚本路径
+        /// HTLogger 脚本路径
         /// </summary>
-        private static string mLoggerScriptPath = Application.dataPath + "/HTUtility/7-Logger/Logger.cs";
+        private static string mLoggerScriptPath = Application.dataPath + "/HTUtility/7-HTLogger/HTLogger.cs";
         /// <summary>
         /// LoggerMode 在未设置的时候默认值为 0
         /// </summary>
@@ -74,7 +74,7 @@ namespace HTUtility
             //若为打印消息模式：
             if (LoggerMode == LoggerModeEnum.Open)
             {
-                //读取 Logger 脚本
+                //读取 HTLogger 脚本
                 string[] contents = File.ReadAllLines(mLoggerScriptPath);
                 for (int i = 0; i < contents.Length; i++)
                 {
@@ -92,7 +92,7 @@ namespace HTUtility
             //若为关闭打印消息模式：
             else
             {
-                //读取 Logger 脚本
+                //读取 HTLogger 脚本
                 string[] contents = File.ReadAllLines(mLoggerScriptPath);
                 for (int i = 0; i < contents.Length; i++)
                 {

@@ -79,7 +79,7 @@
 
 #### 7.通用打印日志接口
 
-- **名称**：Logger
+- **名称**：HTLogger
 
 - **快捷键**：无
 
@@ -87,4 +87,4 @@
 
   为整个自定义消息打印模块添加了总开关——*“菜单栏--HTUtility--7.LoggerSwitch”*
 
-  使用前需要在 Unity 中添加打印消息方法的监听（注册），详细使用方法可见 Script：Logger.cs
+  使用前需要在 Unity 中添加打印消息方法的监听（注册），详细使用方法可见 Script：HTLogger.cs

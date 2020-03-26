@@ -70,7 +70,7 @@
     <Compile Include="Assets\HTUtility\4-SetupScriptTemplate\Editor\SetupScriptTemplate.cs" />
     <Compile Include="Assets\HTUtility\5-GenerateDirectoryStructure\Editor\GenerateDirectoryStructure.cs" />
     <Compile Include="Assets\HTUtility\6-GenerateDirectoryStructurePlus\Editor\GenerateDirectoryStructurePlus.cs" />
-    <Compile Include="Assets\HTUtility\7-Logger\Editor\LoggerSwitchMenu.cs" />
+    <Compile Include="Assets\HTUtility\7-HTLogger\Editor\LoggerSwitchMenu.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

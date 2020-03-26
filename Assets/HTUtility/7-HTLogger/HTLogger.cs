@@ -13,15 +13,15 @@ namespace HTUtility
     /*
      * 使用方法：
      * 1.新建 Class 实现 ILoggerListener 接口，实现 Log 方法
-     * 2.初始化 Logger
-     * 3.向 Logger 中不同的 Channel 分别添加 LoggerListener 监听
+     * 2.初始化 HTLogger
+     * 3.向 HTLogger 中不同的 Channel 分别添加 LoggerListener 监听
      * 4.在菜单栏“HTUtility/6.LoggerSwitch”中开启（切换）Logger 开关
      */
     public interface ILoggerListener
     {
         void Log(string msg);
     }
-    public class Logger : HTSingleton<Logger>
+    public class HTLogger : HTSingleton<HTLogger>
     {
         public enum Channel
         {

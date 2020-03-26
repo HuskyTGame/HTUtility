@@ -39,19 +39,19 @@ namespace HTUtility.Example
             UnityDebugListener unityDebugListener = new UnityDebugListener();
             UnityWarningListener unityWarningListener = new UnityWarningListener();
             UnityErrorListener unityErrorListener = new UnityErrorListener();
-            Logger.Instance.Init(true);
-            Logger.Instance.AddListener(Logger.Channel.Info, unityDebugListener);
-            Logger.Instance.AddListener(Logger.Channel.Todo, unityDebugListener);
-            Logger.Instance.AddListener(Logger.Channel.Debug, unityDebugListener);
-            Logger.Instance.AddListener(Logger.Channel.Warning, unityWarningListener);
-            Logger.Instance.AddListener(Logger.Channel.Error, unityErrorListener);
+            HTLogger.Instance.Init(true);
+            HTLogger.Instance.AddListener(HTLogger.Channel.Info, unityDebugListener);
+            HTLogger.Instance.AddListener(HTLogger.Channel.Todo, unityDebugListener);
+            HTLogger.Instance.AddListener(HTLogger.Channel.Debug, unityDebugListener);
+            HTLogger.Instance.AddListener(HTLogger.Channel.Warning, unityWarningListener);
+            HTLogger.Instance.AddListener(HTLogger.Channel.Error, unityErrorListener);
 
 
-            Logger.Info("测试 Logger 成功！");
-            Logger.Todo("测试 Logger 成功！");
-            Logger.Debug("测试 Logger 成功！");
-            Logger.Warning("测试 Logger 成功！");
-            Logger.Error("测试 Logger 成功！");
+            HTLogger.Info("测试 Logger 成功！");
+            HTLogger.Todo("测试 Logger 成功！");
+            HTLogger.Debug("测试 Logger 成功！");
+            HTLogger.Warning("测试 Logger 成功！");
+            HTLogger.Error("测试 Logger 成功！");
         }
     }
 
