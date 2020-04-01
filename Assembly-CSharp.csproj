@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\HTUtility\7-HTLogger\CustomLoggerService\CustomLoggerService.cs" />
     <Compile Include="Assets\HTUtility\7-HTLogger\Example\UnityLoggerExample.cs" />
     <Compile Include="Assets\HTUtility\7-HTLogger\HTLogger.cs" />
     <Compile Include="Assets\HTUtility\8-TimerServiceForTest\Example\TimerSvcExample.cs" />
