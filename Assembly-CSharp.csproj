@@ -62,6 +62,8 @@
   <ItemGroup>
     <Compile Include="Assets\HTUtility\7-HTLogger\Example\UnityLoggerExample.cs" />
     <Compile Include="Assets\HTUtility\7-HTLogger\HTLogger.cs" />
+    <Compile Include="Assets\HTUtility\8-TimerServiceForTest\Example\TimerSvcExample.cs" />
+    <Compile Include="Assets\HTUtility\8-TimerServiceForTest\TimerServiceForTest.cs" />
     <Compile Include="Assets\HTUtility\Core\HTSingleton.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>E:/Work/GitHubRepository/HTUtility/HTUtility/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

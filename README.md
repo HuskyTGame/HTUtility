@@ -3,6 +3,10 @@
 
 # 版本记录
 
+## v0.0.7
+
+- [x] 新增测试脚本使用的计时器服务（TimerServiceForTest）
+
 ## v0.0.6
 
 - [x] 新增普通类的单例模板（HTSingleton）
@@ -88,3 +92,9 @@
   为整个自定义消息打印模块添加了总开关——*“菜单栏--HTUtility--7.LoggerSwitch”*
 
   使用前需要在 Unity 中添加打印消息方法的监听（注册），详细使用方法可见 Script：HTLogger.cs
+
+#### 8.测试脚本使用的计时器服务
+
+- **名称**：TimerServiceForTest
+- **快捷键**：无
+- **说明**：测试脚本使用的计时器服务（TimerServiceForTest），内含例子。

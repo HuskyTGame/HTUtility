@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/HTUtility/7-HTLogger/Example/LoggerExampleScene.unity
+- path: Assets/HTUtility/8-TimerServiceForTest/Example/TimerSvcExample.unity
   isLoaded: 1
   isActive: 1
