@@ -18,7 +18,7 @@ namespace HTUtility
         {
             private bool mIsOpen;
             private bool mIsActive;
-            private TimeSpan mStartTime;
+            private TimeSpan mBeginTime;
             private TimeSpan mEndTime;
             private float mSumTime;
 
@@ -46,14 +46,14 @@ namespace HTUtility
                 if (mIsActive == false) return;
                 if (openTimer)
                 {
-                    mStartTime = DateTime.Now.TimeOfDay;
+                    mBeginTime = DateTime.Now.TimeOfDay;
                 }
                 else
                 {
                     mEndTime = DateTime.Now.TimeOfDay;
-                    if (mEndTime > mStartTime)
+                    if (mEndTime > mBeginTime)
                     {
-                        mSumTime = (mEndTime - mStartTime).Milliseconds;
+                        mSumTime = (mEndTime - mBeginTime).Milliseconds;
                     }
                 }
                 mIsOpen = openTimer;
@@ -110,17 +110,20 @@ namespace HTUtility
             return mTimerDict.Remove(key);
         }
         /// <summary>
-        /// 设定计时器开始计时开关
+        /// 设定计时器计时开始
         /// </summary>
         /// <param 计时器标识="key"></param>
-        /// <param 是否开始/结束  计时="openTimer"></param>
-        public void SetOpen(string key, bool openTimer)
+        public void Begin(string key)
         {
-            TimerItem timer = GetTimer(key);
-            if (timer != null)
-                timer.SetOpen(openTimer);
-            else
-                HTLogger.Error("无法使用计时器功能，Timer：" + key + "尚未注册！");
+            SetOpen(key, true);
+        }
+        /// <summary>
+        /// 设定计时器计时结束
+        /// </summary>
+        /// <param 计时器标识="key"></param>
+        public void End(string key)
+        {
+            SetOpen(key, false);
         }
         /// <summary>
         /// 获取指定计时器
@@ -150,6 +153,15 @@ namespace HTUtility
                 HTLogger.Error("无法使用计时器功能，Timer：" + key + "尚未注册！");
                 return 0.0f;
             }
+        }
+
+        private void SetOpen(string key, bool openTimer)
+        {
+            TimerItem timer = GetTimer(key);
+            if (timer != null)
+                timer.SetOpen(openTimer);
+            else
+                HTLogger.Error("无法使用计时器功能，Timer：" + key + "尚未注册！");
         }
     }
 }
