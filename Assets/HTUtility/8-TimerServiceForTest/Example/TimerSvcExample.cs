@@ -31,22 +31,22 @@ namespace HTUtility
             int res = 0;
 
             //1.不使用 Function：
-            mTimerSvc.SetOpen("TestExample", true);//开启计时
+            mTimerSvc.Begin("TestExample");//开启计时
             for (int i = 0; i < times; i++)
             {
                 res = a + b;
             }
-            mTimerSvc.SetOpen("TestExample", false);//结束计时
+            mTimerSvc.End("TestExample");//结束计时
             time = mTimerSvc.GetSumTime("TestExample");
             Debug.LogFormat("不使用 Funciton，循环{0}次，共耗时(毫秒)：{1}", times, time);
 
             //2.使用 Function：
-            mTimerSvc.SetOpen("TestExample", true);//开启计时
+            mTimerSvc.Begin("TestExample");//开启计时
             for (int i = 0; i < times; i++)
             {
                 res = Plus(a, b);
             }
-            mTimerSvc.SetOpen("TestExample", false);//结束计时
+            mTimerSvc.End("TestExample");//结束计时
             time = mTimerSvc.GetSumTime("TestExample");
             Debug.LogFormat("使用 Funciton，循环{0}次，共耗时(毫秒)：{1}", times, time);
         }
